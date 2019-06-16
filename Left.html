@@ -1,0 +1,78 @@
+<html>
+<head>
+<title> Salud </title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Palatino Linotype;
+  font-size: 18;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1F487E;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #1F487E;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: Red;
+}
+
+.sidenav .closebtn {
+  font-size: 60px;
+  color: White;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body bgcolor=#1D3461>
+
+<center>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br>
+  <a style="text-decoration:none " title="Personal Information"  href="About.html" target="Right"> <img src="About.png" alt="About" width="28" height="28"> </a>
+    <br><br>
+  <a style="text-decoration:none " title="Hobbies"  href="Hobbies.html" target="Right"><img src="Favs.png" alt="Hobbies" width="28" height="28"> </a>
+    <br><br>
+  <a style="text-decoration:none " title="Background"  href="Background.html" target="Right"><img src="Education.png" alt="Education" width="28" height="28"> </a>
+  <br><br>
+<a style="text-decoration:none " title="Gallery"  href="Gallery.html" target="Right"><img src="Gallery.png" alt="Gallery" width="28" height="28"> </a>
+  <br><br>
+<a style="text-decoration:none " title="Contacts"  href="Contacts.html" target="Right"><img src="Contacts.png" alt="Contacts" width="28" height="28"> </a>
+</div>
+</center>
+<span style="color:#B7CCE6;font-size:30px;cursor:pointer;" onmouseover="this.style.color='White'" onmouseout="this.style.color='#B7CCE6'" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "40";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+<link rel=”stylesheet” type=”text/css” href=”CSS.css”>
+<title> Salud </title>
+</head>
+
+<style>
+
+::-webkit-scrollbar {
+display: none;
+}
+#carousel{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotation 20s infinite linear;
+}
+#carousel: onmousedown{
+    animation-play-state: paused;
+}
+#carousel figure{
+    display: block;
+    position: absolute;
+    width: 430;
+    height: 450;
+    left: 10px;
+    top: 10px;
+    background: black;
+    overflow: hidden;
+    border: solid 5px black;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2){ transform: rotateY(90deg) translateZ(288px);}
+#carousel figure:nth-child(3){ transform: rotateY(180deg) translateZ(288px);}
+#carousel figure:nth-child(4){ transform: rotateY(270deg) translateZ(288px);}
+#carousel img{
+    -webkit-filter: grayscale(0);
+    cursor: pointer;
+    transition: all .5s ease;
+    width: 90%;
+}
+#carousel img:hover{
+    -webkit-filter: grayscale(0);
+    transform: scale(1.2,1.2);
+}
+@keyframes rotation{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+body {
+background-image:url(BG2.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+font-size:25;
+color: White;
+font-family: palatino linotype;
+}
+</style>
+
+
+<body bgcolor=#B7CCE6>
+
+<h1 style="color: #9BB8DC;font-family:palatino linotype;"> Gallery </h1>
+
+
+
+<div id="carousel">
+    <figure><img src="Me1.jpg" alt="" width="430" height="450"></figure>
+    <figure><img src="Me2.jpg" alt="" width="430" height="450"></figure>
+    <figure><img src="Me3.jpg" alt="" width="430" height="450"></figure>
+    <figure><img src="Me4.jpg" alt="" width="430" height="450"></figure>
+</div>
+
+
+</body>
+
+
+</html>
